@@ -1,0 +1,7 @@
+Net pickup = SUM(Fact[CurrentOTB]) - SUM(Fact[PriorOTB])
+
+Current OTB occupancy = DIVIDE(SUM(Fact[CurrentOTB]), SUM(Fact[Capacity]))
+
+Gap to target = SUM(Fact[CurrentOTB]) - SUM(Fact[TargetOTB])
+
+Remaining rooms = SUM(Fact[Capacity]) - SUM(Fact[CurrentOTB])

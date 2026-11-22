@@ -1,0 +1,9 @@
+Room revenue = SUM(Fact[RoomRevenue])
+
+Occupancy = DIVIDE(SUM(Fact[Sold]), SUM(Fact[Available]))
+
+ADR = DIVIDE([Room revenue], SUM(Fact[Sold]))
+
+RevPAR = DIVIDE([Room revenue], SUM(Fact[Available]))
+
+Budget variance = [Room revenue] - SUM(Fact[Budget])
